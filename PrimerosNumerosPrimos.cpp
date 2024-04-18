@@ -12,6 +12,7 @@ Probar los divisores primos , hasta la raiz cuadrada del numero */
 
 /* funcion si es primo queremos que valga verdad, si es verdad se imprime , si es falso nose ejeculta con el if de la funcion principal.*/
 bool primo(int p){
+    /* la condicion es verdadera,por ahora por eso continia */
     bool condicion;
     /* no tiene que ser 1 ni 0 */
     if (p !=1 && p!=0)
@@ -22,7 +23,7 @@ bool primo(int p){
             /* si la variable n es divisible con i  */
             if (p % i ==0)
             {
-                /* si n es igual al mismo el dibisible entonce es verdad  */
+                /* si p es igual al mismo el dibisible entonce es verdad  */
                 if(p == i)
                 {
                     

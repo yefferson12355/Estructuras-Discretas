@@ -2,7 +2,11 @@
 /* Biblioteca */
 
 using namespace std;
-
+bool primo(int n){   
+    
+    /* return false o return true */
+    return true;
+}
 
 int main(int argc, char const *argv[])
 /* (int argc, char const *argv[]): Estos son los datos que puede recibir la función main al ejecutarse.
@@ -15,5 +19,4 @@ char const *argv[]: Son los argumentos en sí, que son cadenas de texto (strings
 
     
     return 0;/* 0 representa que esta bien, y 1 representa que esta mal 1 error, por que la funcion principal recibe enteros, int ...  */
-
 }
