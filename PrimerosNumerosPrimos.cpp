@@ -10,42 +10,52 @@ using namespace std;
 Probar los divisores primos , hasta la raiz cuadrada del numero */
 
 
+/* funcion si es primo queremos que valga verdad, si es verdad se imprime , si es falso nose ejeculta con el if de la funcion principal.*/
+bool primo(int p){
+    bool condicion;
+    /* no tiene que ser 1 ni 0 */
+    if (p !=1 && p!=0)
+    {
+        /* comenzamos con el 2 por que, los numeros 1 y 0 ya estan descartados, no son  primos*/
+       for (int  i = 2; i <=p; i++)
+       {
+            /* si la variable n es divisible con i  */
+            if (p % i ==0)
+            {
+                /* si n es igual al mismo el dibisible entonce es verdad  */
+                if(p == i)
+                {
+                    
+                    condicion = true;
+                }
+                /* */
+                else
+                {
+                    condicion = false;
+                    return condicion;
+                }
+            }
+       }
+    }
+    /* si es uno o cero vamos a pedirle que nos mande un falso y no se imprimira el numero , */ 
+    else condicion = false;
 
-int primo(){
-    /*  */
+    return condicion;
+    
 }
-int main(int argc, char const *argv[])
+int main()
 {
     /* n numeros */
-    long int n=0;
-    /* el primer numero primo es 2  */
-    long int Nprimo=2;
-    /* contador para los primos */
-    long int contador=0;
+    int n;
+    /* ingrese hasta que numero buscar  */
     cin>>n;
-    /* condicionamos para que el n no sea 0 */
-    if(n>0){
-        /* Un bucle para los n primeros numeros primos  */
-        for ( int i = 1; i <= n; i++)
-        {
-            /* Condiciones para que es un numero primo,dividible entre 1 y el mismo */
-            if (Nprimo%1==0&&Nprimo%Nprimo==0)
-            {
-                
-            }
-            
-            
-        }
-        cout<<Nprimo;
+    /* para ir recorriendo todos los numeros , si es un numero primo, o no lo es */
+    for ( int i = 1; i <= n; i++)
+    {
+       /* llamamo funcion primo. Imprimir en pantalla un numero, en caso que sea primo , mande a imprimir i ...si es numero primo imprime  */
+        if (primo(i)){
+            cout<<i<<endl;  
+        }  
     }
-    else{
-        cout<<"Ingrese un numero o numero mayor a 0"<<endl;
-    }
-   
-    /* Imprimir los primeros n primos  */
-    
-    primo();
-
-    /* code */
     return 0;
 }
