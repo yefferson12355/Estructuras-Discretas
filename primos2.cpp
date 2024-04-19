@@ -11,7 +11,7 @@ bool esPrimo(int numero) {
     }
 
     // Comenzamos a verificar divisores desde 2 hasta la raíz cuadrada del número
-    // Por teorema basta con probar hasta la raiz cuadrada del numero
+    // Por teorema basta con probar hasta la raiz cuadrada del numero   
     for (int divisor = 2; divisor <= sqrt(numero); ++divisor) {
         // Si el número es divisible por el divisor actual, no es primo
         if (numero % divisor == 0) {
